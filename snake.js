@@ -13,6 +13,18 @@ class Snake{
     this.body.push(head);
   }
 
+  endGame(){
+    let x = this.body[this.body.length-1].x;
+    let y = this.body[this.body.length-1].y;
+    for(let i = 0; i<this.body.length-1; i++){  
+      let part = this.body[i];
+      if(part.x == x && part.y == y){
+        return true;
+      }
+    }
+    return false;
+  }
+
   eat(pos){
     let x = this.body[this.body.length-1].x;
     let y = this.body[this.body.length-1].y;

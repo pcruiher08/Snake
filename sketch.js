@@ -37,7 +37,11 @@ function draw() {
   }
   snake.update();
   snake.show();
-
+  if(snake.endGame()){
+    print("END GAME");
+    background(255,0,0);
+    noLoop();
+  }
   noStroke();
   fill(255,0,0);
   rect(food.x,food.y,1,1);

@@ -15,7 +15,9 @@ class Snake{
     this.body[0].y += this.ydir;
   }
   show(){
+
     fill(0);
+    noStroke();
   	rect(this.body[0].x, this.body[0].y, 1, 1);
   }
 }

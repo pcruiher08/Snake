@@ -1,5 +1,5 @@
 let snake;
-let rezolution = 10;
+let rezolution = 20;
 let w, h;
 function setup() {
   createCanvas(400, 400);
@@ -32,6 +32,9 @@ function keyPressed(){
 function draw() {
   background(220);
   scale(rezolution);
+  if(snake.eat(food)){
+    foodLocation();
+  }
   snake.update();
   snake.show();
 
